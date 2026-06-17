@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import HomeScreen from './screens/HomeScreen';
+import ChartsScreen from './screens/ChartsScreen';
 import SettingsScreen from './screens/SettingsScreen';
 
 const Tab = createBottomTabNavigator();
@@ -17,6 +18,8 @@ export default function App() {
             let iconName;
             if (route.name === 'Home') {
               iconName = focused ? 'leaf' : 'leaf-outline';
+            } else if (route.name === 'Charts') {
+              iconName = focused ? 'analytics' : 'analytics-outline';
             } else if (route.name === 'Settings') {
               iconName = focused ? 'settings' : 'settings-outline';
             }
@@ -37,6 +40,11 @@ export default function App() {
           name="Home" 
           component={HomeScreen} 
           options={{ title: 'SmartPot' }}
+        />
+        <Tab.Screen 
+          name="Charts" 
+          component={ChartsScreen}
+          options={{ title: 'History' }}
         />
         <Tab.Screen 
           name="Settings" 

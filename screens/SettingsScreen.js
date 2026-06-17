@@ -39,7 +39,7 @@ export default function SettingsScreen() {
           Electrical & Computer Engineering
         </Text>
         <Text style={styles.sectionText}>
-          Senior Design 2025
+          Senior Design 2026
         </Text>
       </View>
     </ScrollView>
